@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@clerk/chrome-extension": "^2.2.16",
+    "ffmpeg": "^0.0.4",
+    "firebase": "^11.5.0"
+  }
+}

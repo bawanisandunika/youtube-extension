@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.gstatic.com 'wasm-unsafe-eval' 'inline-speculation-rules' http://localhost:* http://127.0.0.1:*;">
+  <title>YouTube Downloader - Sign Up</title>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      background-size: 200% 200%;
+      animation: gradientBackground 10s ease infinite;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .signup-container {
+      width: 350px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 1s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0 0 20px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 12px;
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .signup-btn:hover {
+      background: #ff4a3d;
+    }
+
+    .google-btn {
+      width: 100%;
+      padding: 12px;
+      background: #fff;
+      color: #4285F4;
+      border: 1px solid #4285F4;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .google-btn:hover {
+      background: #f1f1f1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <img src="logo.png" alt="YouTube Downloader Logo" class="logo">
+    <h2>Create Your Account</h2>
+    <p>Sign up to download your favorite YouTube videos with ease!</p>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Enter your email">
+    </div>
+
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter your password">
+    </div>
+
+    <button id="signupBtn" class="signup-btn">Sign Up</button>
+
+    <div class="divider">
+      <span>- or -</span>
+    </div>
+
+    <button id="googleSignInBtn" class="google-btn">Sign Up with Google</button>
+  </div>
+
+  <!-- Include JavaScript -->
+  <script type="module" src="signup.js"></script>
+</body>
+</html>
